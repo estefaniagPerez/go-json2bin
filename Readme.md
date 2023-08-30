@@ -11,7 +11,7 @@
 > _first version: estegp - 31/08/2023_ </br>
 
 ## Introduction
-Welcome to Json2Binary! This project, developed in [Go][go_ref] (or Golang), is dedicated to transforming a demo JSON configuration file into binary files seamlessly. The primary motivation behind this utility is to demostrate the process of binary file generation from human-readable JSON files, eliminating the complexities associated with manual conversions and potential errors.
+Welcome to Json2Binary! This project, developed in [Go/Golang][go_ref], is dedicated to transforming a demo JSON configuration file into binary files seamlessly. The primary motivation behind this utility is to demostrate the process of binary file generation from human-readable JSON files, eliminating the complexities associated with manual conversions and potential errors.
 
 
 <!--
@@ -23,3 +23,10 @@ Welcome to Json2Binary! This project, developed in [Go][go_ref] (or Golang), is 
 - Ease of Use: With a straightforward command-line interface, you can generate binary files in seconds.
 - Golang Optimized: Benefit from the speed and performance optimizations that Golang offers.
 - Extensible: As open-source software, you can contribute and tailor the tool to fit your exact needs.
+
+## Getting Started
+This application has been developed with [Go][go_ref], so the first thing you need to do is to install the Go language tools. The best way to do it is by following the installation guide at the [Go][go_ref] documentation site.
+<pre>
+<a href="https://go.dev/doc/install">https://go.dev/doc/install</a>
+</pre>
+
