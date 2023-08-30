@@ -55,7 +55,7 @@ env GOOS=windows GOARCH=amd64 go build .
 The executable is run by passing 3 parameters:
 1. The type of operation.
 2. The path to the configuration JSON file.
-3. The path of the binary file to be generated.
+3. The path of the binary file to be generated. 
 
 The operation can be of two types:
 - --gen_cfg: for generating a binary file from the data of a JSON configuration file.
