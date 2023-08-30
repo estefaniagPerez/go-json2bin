@@ -13,7 +13,7 @@
 
 ## Introduction
 Welcome to Json2Binary! This project, developed in [Go/Golang][go_ref],converts demo JSON configuration files into binary files seamlessly. The primary motivation behind this utility is to demonstrate the process of binary file generation from human-readable JSON files, eliminating the complexities associated with manual conversions and potential errors.
-
+ 
 
 <!--
 ![maintenance-status](https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg)-->
