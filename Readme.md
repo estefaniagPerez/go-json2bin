@@ -25,8 +25,8 @@ Welcome to Json2Binary! This project, developed in [Go/Golang][go_ref], is dedic
 - Extensible: As open-source software, you can contribute and tailor the tool to fit your exact needs.
 
 ## Getting Started
+### Installation
 This application has been developed with [Go][go_ref], so the first thing you need to do is to install the Go language tools. The best way to do it is by following the installation guide at the [Go][go_ref] documentation site.
 <pre>
 <a href="https://go.dev/doc/install">https://go.dev/doc/install</a>
 </pre>
-
