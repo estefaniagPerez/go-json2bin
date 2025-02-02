@@ -10,7 +10,7 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 > _first version: estegp - 31/08/2023_ </br>
-> _last edition: estefaniagPerez - 02/02/2025 (This repository has been moved from my own old repository on Feb 2025)_
+> _last edition: estefaniagPerez - 02/02/2025 (This repository has been moved from my own old repository)_
 
 ## Introduction
 Welcome to Json2Binary! This project, developed in [Go/Golang][go_ref],converts demo JSON configuration files into binary files seamlessly. The primary motivation behind this utility is to demonstrate the process of binary file generation from human-readable JSON files, eliminating the complexities associated with manual conversions and potential errors.
