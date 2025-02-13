@@ -11,7 +11,7 @@
             "mode": "auto",
             "program": "${fileDirname}",
             "env": {},
-            "args": ["--gen_cfg", "Conf.json", "Conf.dat"]
+            "args": ["--gen_bin", "Conf.json", "Conf.dat"]
         }
     ]
 }
