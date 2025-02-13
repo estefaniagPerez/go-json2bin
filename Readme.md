@@ -59,9 +59,9 @@ The executable is run by passing 3 parameters:
 3. The path of the binary file to be generated. 
 
 The operation can be of two types:
-- --gen_cfg: for generating a binary file from the data of a JSON configuration file.
+- --gen_bin: for generating a binary file from the data of a JSON configuration file.
 ```Shell
-  ./Json2Bin --gen_cfg Conf.json Conf.dat
+  ./Json2Bin --gen_bin Conf.json Conf.dat
 ```
 - --parse_file: this operation will do the inverse task, it gets a binary file, parse the data and write it into a readable JSON file.
 ```Shell
@@ -91,7 +91,7 @@ Finally, to start debugging the application, press F5 on the keyboard, and the p
 Also, if you want to change the arguments used to launch the project, go to the .vscode folder in the project explorer, open the launch.json file, and modify the parameters in the "args" property.
 
 ```json
-    "args": ["--gen_cfg", "Conf.json", "Conf.dat"]
+    "args": ["--gen_bin", "Conf.json", "Conf.dat"]
 ```
 
 
