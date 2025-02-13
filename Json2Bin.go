@@ -17,8 +17,8 @@ func main() {
 	json_path := os.Args[2]
 	binary_out := os.Args[3]
 
-	if type_op == "--gen_cfg" {
-		err := GenCfg(json_path, binary_out)
+	if type_op == "--gen_bin" {
+		err := GenBin(json_path, binary_out)
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -61,7 +61,7 @@ func ParseCfg(json_path string, binary_out string) error {
 	return nil
 }
 
-func GenCfg(json_path string, binary_out string) error {
+func GenBin(json_path string, binary_out string) error {
 	dat, err := os.ReadFile(json_path)
 	if err != nil {
 		return err
