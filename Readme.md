@@ -27,14 +27,14 @@ Welcome to Json2Binary! This project, developed in [Go/Golang][go_ref], converts
 - Extensible: As open-source software, you can contribute and tailor the tool to fit your exact needs.
 
 ## Installation
-This application has been developed in [Go][go_ref], so the first thing you need to do is to install the Go language tools. The best way to do it is by following the installation guide at the [Go][go_ref] documentation site.
+This application has been developed in [Go][go_ref], so the first thing you need to do is install Go language tools. The best way to do it is by following the installation guide at the [Go][go_ref] documentation site.
 <pre>
 <a href="https://go.dev/doc/install">https://go.dev/doc/install</a>
 </pre>
 
 ## Build
 ### Initialize Module
-To build the project, it is necessary to first initialize the project. Open a terminal and go to the folder that contains the project, then run the following command.
+To build the project, it is necessary to initialize the project. Open a terminal and go to the folder that contains the project, then run the following command.
 
 ```Shell
 go mod init Json2Bin.go
@@ -47,7 +47,7 @@ go build .
 This will generate an executable for the current OS.
 
 ### Build Project for Other OS
-For generating executables for other platforms you can use the GOOS parameter. For example, if you want to build for Windows 64 bits from Linux you can run the following commad:
+If you want to generate executables for other platforms you can use the GOOS parameter. For example, if you want to build for Windows 64 bits from Linux you can run the following commad:
 
 ```Shell
 env GOOS=windows GOARCH=amd64 go build .
@@ -58,12 +58,12 @@ The executable is run by passing 3 parameters:
 2. The path to the configuration JSON file.
 3. The path of the binary file to be generated. 
 
-The operation can be of two types:
+There are two times of operations:
 - --gen_bin: for generating a binary file from the data of a JSON configuration file.
 ```Shell
   ./Json2Bin --gen_bin Conf.json Conf.dat
 ```
-- --parse_file: this operation will do the inverse task, it gets a binary file, parse the data and write it into a readable JSON file.
+- --parse_file: this operation gets a binary file, parses the data and writes it into a readable JSON file.
 ```Shell
   ./Json2Bin --parse_file Conf.json Conf.dat
 ```
@@ -73,13 +73,13 @@ This project can be used in [VSCode][vscode_ref]. If you haven't set up [Go][go_
 <a href="https://code.visualstudio.com/docs/languages/go">https://code.visualstudio.com/docs/languages/go</a>
 </pre>
 
-Once the plugin is configured, you will need to configure the GOROOT variable in [VSCode][vscode_ref], go to File -> Preferences -> Settings and search for GOROOT. On the GOROOT setting, click on Edit Settings and add the following line to the settings.json:
+Once the plugin is configured, you will need to configure the GOROOT variable in [VSCode][vscode_ref], go to File -> Preferences -> Settings and search for GOROOT. On the GOROOT setting, click Edit Settings and add the following line to the settings.json:
 
 ```json
   "go.goroot": "/home/userno/.go/"
 ```
 
-If the project has not been initialized with the "mod init" you can configure the GO111MODULE parameter to avoid an error when running the application.
+If the project is not initialized with the "mod init" you can configure the GO111MODULE parameter to avoid an error when running the application.
 ```json
     "go.toolsEnvVars": {
         "GO111MODULE":"auto"
