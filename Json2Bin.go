@@ -12,7 +12,7 @@ func main() {
 		log.Fatal("Not enough arguments")
 	}
 
-	// --gen_cfg -> generate resource / --parse_file -> generate json
+	// --gen_bin -> generate resource / --parse_file -> generate json
 	type_op := os.Args[1]
 	json_path := os.Args[2]
 	binary_out := os.Args[3]
