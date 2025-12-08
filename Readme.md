@@ -34,24 +34,20 @@ This application has been developed in [Go][go_ref], so the first thing you need
 
 ## Build
 ### Initialize Module
-To build the project, it is necessary to initialize the project. Open a terminal and go to the folder that contains the project, then run the following command.
+To build the project, it is necessary to initialize the module. Open a terminal and go to the folder that contains the project, then run the following command.
 
 ```Shell
-go mod init Json2Bin.go
+go mod init json2bin
+go mod tidy
 ```
 ### Build Project
-After this, you can build the project by running the go build command
+After this, you can build the project using the Makefile by running the following command in the terminal from the folder src/scripts:
 ```Shell
-go build .
+make
 ```
 This will generate an executable for the current OS.
 
-### Build Project for Other OS
-If you want to generate executables for other platforms you can use the GOOS parameter. For example, if you want to build for Windows 64 bits from Linux you can run the following commad:
 
-```Shell
-env GOOS=windows GOARCH=amd64 go build .
-```
 ## Run
 The executable is run by passing 3 parameters:
 1. The type of operation.
@@ -61,37 +57,9 @@ The executable is run by passing 3 parameters:
 There are two times of operations:
 - --gen_bin: for generating a binary file from the data of a JSON configuration file.
 ```Shell
-  ./Json2Bin --gen_bin Conf.json Conf.dat
+  ./json2bin-parser --gen_bin Conf.json Conf.dat
 ```
 - --parse_file: this operation gets a binary file, parses the data and writes it into a readable JSON file.
 ```Shell
-  ./Json2Bin --parse_file Conf.json Conf.dat
+  ./json2bin-parser --parse_file Conf.json Conf.dat
 ```
-## Debbug with VSCode
-This project can be used in [VSCode][vscode_ref]. If you haven't set up [Go][go_ref] support in your IDE, you can follow the [VSCode][vscode_go_ref] documentation to install the [Go][go_ref] plugin.
-<pre>
-<a href="https://code.visualstudio.com/docs/languages/go">https://code.visualstudio.com/docs/languages/go</a>
-</pre>
-
-Once the plugin is configured, you will need to configure the GOROOT variable in [VSCode][vscode_ref], go to File -> Preferences -> Settings and search for GOROOT. On the GOROOT setting, click Edit Settings and add the following line to the settings.json:
-
-```json
-  "go.goroot": "/home/userno/.go/"
-```
-
-If the project is not initialized with the "mod init" you can configure the GO111MODULE parameter to avoid an error when running the application.
-```json
-    "go.toolsEnvVars": {
-        "GO111MODULE":"auto"
-    }
-```
-
-Finally, to start debugging the application, press F5 on the keyboard, and the project will start debugging.
-
-Also, if you want to change the arguments used to launch the project, go to the .vscode folder in the project explorer, open the launch.json file, and modify the parameters in the "args" property.
-
-```json
-    "args": ["--gen_bin", "Conf.json", "Conf.dat"]
-```
-
-
