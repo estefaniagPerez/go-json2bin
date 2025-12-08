@@ -9,9 +9,9 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${fileDirname}",
+            "program": "${workspaceFolder}/src/cmd/json2bin-parser",
             "env": {},
-            "args": ["--gen_bin", "Conf.json", "Conf.dat"]
+            "args": ["--gen_bin", "${workspaceFolder}/assets/Conf.json", "${workspaceFolder}/assets/Conf.dat"]
         }
     ]
 }

@@ -36,4 +36,4 @@ jobs:
 
       # 5. Verify Build 
       - name: Verify Build
-        run: go build -v -o /dev/null ./...
+        run: go build -v -o /dev/null ./cmd/json2bin-parser/

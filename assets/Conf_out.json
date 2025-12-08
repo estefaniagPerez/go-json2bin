@@ -11,7 +11,7 @@
             "ISO": 100,
             "WhiteBalance": 3000,
             "Aperture": 14,
-            "Dng": true,
+            "DNG": true,
             "ImageSize": 2
         },
         "Fly": {
