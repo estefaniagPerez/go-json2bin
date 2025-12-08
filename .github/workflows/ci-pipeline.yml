@@ -12,6 +12,9 @@ jobs:
   quality-check:
     name: Lint, Test & Build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src
     steps:
       # 1. Checkout Code
       - name: Checkout code
