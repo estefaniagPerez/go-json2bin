@@ -32,9 +32,9 @@ jobs:
 
       # 4. Modern Linting (fmt, lint, vet, shadow)
       - name: Run staticcheck
-        uses: dominikh/staticcheck-action@latest
+        uses: dominikh/staticcheck-action@v1.4.0
         with:
-          version: latest   
+          version: v1.4.0   
 
       # 5. Run Tests
       - name: Run Tests
