@@ -12,9 +12,6 @@ jobs:
   quality-check:
     name: Lint, Test & Build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./
     steps:
       # 1. Checkout Code
       - name: Checkout code
@@ -31,14 +28,13 @@ jobs:
         uses: golangci/golangci-lint-action@v3
         with:
           version: latest
-          #working-directory: src
           # only-new-issues: true 
 
       # 4. Modern Linting (fmt, lint, vet, shadow)
-      #- name: Run staticcheck
-      #  uses: honnef.co/go/tools/cmd/staticcheck@latest
-      #  with:
-      #    version: latest   
+      - name: Run staticcheck
+        uses: dominikh/staticcheck-action@latest
+        with:
+          version: latest   
 
       # 5. Run Tests
       - name: Run Tests
