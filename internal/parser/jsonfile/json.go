@@ -15,14 +15,12 @@ func (j JSONFileParser) Write(file string, data Config) error {
 	enc.SetEscapeHTML(false)
 	err := enc.Encode(&data)
 	if err != nil {
-		return err
+		return fmt.Errorf("error encoding configuration to JSON: %w", err)
 	}
 
-	var s = buf.String()
-	fmt.Println(s)
 	err = os.WriteFile(file, buf.Bytes(), os.ModePerm)
 	if err != nil {
-		return err
+		return fmt.Errorf("error writing JSON to file: %w", err)
 	}
 
 	return nil
@@ -33,12 +31,12 @@ func (j JSONFileParser) Read(jsonPath string) (Config, error) {
 
 	data, err := os.ReadFile(jsonPath)
 	if err != nil {
-		return dataj, err
+		return dataj, fmt.Errorf("error reading JSON file: %w", err)
 	}
 	err = json.Unmarshal([]byte(data), &dataj)
 
 	if err != nil {
-		return dataj, err
+		return dataj, fmt.Errorf("error converting to JSON structure: %w", err)
 	}
 	return dataj, nil
 }

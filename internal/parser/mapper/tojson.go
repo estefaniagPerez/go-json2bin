@@ -1,10 +1,12 @@
 package mapper
 
 import (
-	"localhost/estefaniagPerez/json2bin/internal/helper"
-	"localhost/estefaniagPerez/json2bin/internal/parser/binaryfile"
-	"localhost/estefaniagPerez/json2bin/internal/parser/jsonfile"
+	"fmt"
 	"strconv"
+
+	"github.com/estefaniagPerez/json2bin/internal/helper"
+	"github.com/estefaniagPerez/json2bin/internal/parser/binaryfile"
+	"github.com/estefaniagPerez/json2bin/internal/parser/jsonfile"
 )
 
 func JSONToConfig(data jsonfile.Config) (binaryfile.Config, error) {
@@ -12,7 +14,7 @@ func JSONToConfig(data jsonfile.Config) (binaryfile.Config, error) {
 	var err error
 	conf.DevInfo, err = loadDevInfo(data)
 	if err != nil {
-		return conf, err
+		return conf, fmt.Errorf("error joading JSON device information: %w", err)
 	}
 
 	conf.DevSettings = loadSettings(data)
@@ -23,7 +25,7 @@ func loadDevInfo(data jsonfile.Config) (binaryfile.DevInfo, error) {
 	var devinfo binaryfile.DevInfo
 	versionU, err := strconv.ParseUint(data.DevInfo.Version, 10, 32)
 	if err != nil {
-		return devinfo, err
+		return devinfo, fmt.Errorf("error converting version string to uint: %w", err)
 	}
 	devinfo.Version = uint32(versionU)
 	copy(devinfo.DeviceSn[:], data.DevInfo.SerialNumber)

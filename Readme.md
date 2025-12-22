@@ -32,16 +32,8 @@ This application has been developed in [Go][go_ref], so the first thing you need
 <a href="https://go.dev/doc/install">https://go.dev/doc/install</a>
 </pre>
 
-## Build
-### Initialize Module
-To build the project, it is necessary to initialize the module. Open a terminal and go to the folder that contains the project, then run the following command.
-
-```Shell
-go mod init json2bin
-go mod tidy
-```
-### Build Project
-After this, you can build the project using the Makefile by running the following command in the terminal from the folder src/scripts:
+## Build Project
+After this, you can build the project using the Makefile by running the following command in the terminal from the root folder:
 ```Shell
 make
 ```
@@ -55,11 +47,11 @@ The executable is run by passing 3 parameters:
 3. The path of the binary file to be generated. 
 
 There are two times of operations:
-- --gen_bin: for generating a binary file from the data of a JSON configuration file.
+- gen_bin: for generating a binary file from the data of a JSON configuration file.
 ```Shell
-  ./json2bin-parser --gen_bin Conf.json Conf.dat
+  ./json2bin-parser --op=gen_bin --json=./assets/Conf_out.json --bin=./assets/Conf.dat
 ```
-- --parse_file: this operation gets a binary file, parses the data and writes it into a readable JSON file.
+- parse_file: this operation gets a binary file, parses the data and writes it into a readable JSON file.
 ```Shell
-  ./json2bin-parser --parse_file Conf.json Conf.dat
+  ./json2bin-parser --op=parse_file --json=./assets/Conf_out.json --bin=./assets/Conf_out.dat
 ```

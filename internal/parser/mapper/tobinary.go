@@ -2,10 +2,11 @@ package mapper
 
 import (
 	"bytes"
-	"localhost/estefaniagPerez/json2bin/internal/helper"
-	"localhost/estefaniagPerez/json2bin/internal/parser/binaryfile"
-	"localhost/estefaniagPerez/json2bin/internal/parser/jsonfile"
 	"strconv"
+
+	"github.com/estefaniagPerez/json2bin/internal/helper"
+	"github.com/estefaniagPerez/json2bin/internal/parser/binaryfile"
+	"github.com/estefaniagPerez/json2bin/internal/parser/jsonfile"
 )
 
 func ConfigToJSON(conf binaryfile.Config) (jsonfile.Config, error) {
