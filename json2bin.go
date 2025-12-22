@@ -1,10 +1,10 @@
 package json2bin
 
 import (
-	parser "localhost/estefaniagPerez/json2bin/internal/parser"
-	"localhost/estefaniagPerez/json2bin/internal/parser/binaryfile"
-	"localhost/estefaniagPerez/json2bin/internal/parser/jsonfile"
-	"localhost/estefaniagPerez/json2bin/internal/parser/mapper"
+	"github.com/estefaniagPerez/json2bin/internal/parser"
+	"github.com/estefaniagPerez/json2bin/internal/parser/binaryfile"
+	"github.com/estefaniagPerez/json2bin/internal/parser/jsonfile"
+	"github.com/estefaniagPerez/json2bin/internal/parser/mapper"
 )
 
 func ParseConf(jsonPath string, binaryOut string) error {
